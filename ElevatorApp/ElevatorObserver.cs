@@ -26,8 +26,13 @@ namespace ElevatorApp
         // Called by the elevator every time it changes.
         public void Update(Elevator e)
         {
-            // turn the 0.0..1.0 position into a pixel height in the shaft
-            car.Top = (int)(260 - e.Position * 250);
+            // turn the 0.0..1.0 position into a pixel height inside whatever
+            // size the shaft is (so the shaft can be resized freely)
+            int margin = 10;
+            int shaftHeight = (car.Parent != null) ? car.Parent.Height : 450;
+            double groundTop = shaftHeight - car.Height - margin; // car resting on ground
+            double firstTop = margin;                             // car at the top
+            car.Top = (int)(groundTop - e.Position * (groundTop - firstTop));
 
             // while moving, show where it is heading; when idle, show where it is
             int shownFloor = e.IsMoving ? e.TargetFloor : e.CurrentFloor;
