@@ -73,7 +73,7 @@ namespace ElevatorApp
             try
             {
                 // start with a query that matches everything, then add the filters
-                string sql = "SELECT Id, FloorName, MoveTime FROM Log WHERE 1=1";
+                string sql = "SELECT Id, Elevator, FloorName, MoveTime FROM Log WHERE 1=1";
                 if (!chkAllDates.Checked)
                     sql += " AND CONVERT(date, MoveTime) = @day";
                 if (cmbFloor.SelectedItem.ToString() != "All")
@@ -95,6 +95,7 @@ namespace ElevatorApp
 
                     // friendly column headers and date format
                     if (dgv.Columns.Contains("Id")) dgv.Columns["Id"].HeaderText = "ID";
+                    if (dgv.Columns.Contains("Elevator")) dgv.Columns["Elevator"].HeaderText = "Lift";
                     if (dgv.Columns.Contains("FloorName")) dgv.Columns["FloorName"].HeaderText = "Floor";
                     if (dgv.Columns.Contains("MoveTime"))
                     {

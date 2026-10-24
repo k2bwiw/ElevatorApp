@@ -2,15 +2,8 @@
 {
     partial class Form1
     {
-        /// <summary>
-        ///  Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        ///  Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -22,228 +15,324 @@
 
         #region Windows Form Designer generated code
 
-        /// <summary>
-        ///  Required method for Designer support - do not modify
-        ///  the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            pnlShaft = new Panel();
-            pnlCar = new Panel();
+
+            lblTitleA = new Label();
+            pnlShaftA = new Panel();
+            pnlCarA = new Panel();
+            lblTitleB = new Label();
+            pnlShaftB = new Panel();
+            pnlCarB = new Panel();
+
             lblFloor1Name = new Label();
-            btnRequestFloor1 = new Button();
-            lblStatusFloor1 = new Label();
+            btnCall1 = new Button();
             lblFloor0Name = new Label();
-            btnRequestFloor0 = new Button();
-            lblStatusFloor0 = new Label();
-            grpControlPanel = new GroupBox();
-            btnFloor0 = new Button();
-            btnFloor1 = new Button();
-            lblDisplay = new Label();
+            btnCall0 = new Button();
+
+            grpPanelA = new GroupBox();
+            lblDisplayA = new Label();
+            btnA1 = new Button();
+            btnA0 = new Button();
+            lblStatusA = new Label();
+
+            grpPanelB = new GroupBox();
+            lblDisplayB = new Label();
+            btnB1 = new Button();
+            btnB0 = new Button();
+            lblStatusB = new Label();
+
             btnLog = new Button();
-            dgvLog = new DataGridView();
             btnHistory = new Button();
+            dgvLog = new DataGridView();
             animationTimer = new System.Windows.Forms.Timer(components);
-            pnlShaft.SuspendLayout();
-            grpControlPanel.SuspendLayout();
+
+            pnlShaftA.SuspendLayout();
+            pnlShaftB.SuspendLayout();
+            grpPanelA.SuspendLayout();
+            grpPanelB.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvLog).BeginInit();
             SuspendLayout();
-            // 
-            // pnlShaft
-            // 
-            pnlShaft.BackColor = Color.Silver;
-            pnlShaft.Controls.Add(pnlCar);
-            pnlShaft.Location = new Point(20, 20);
-            pnlShaft.Name = "pnlShaft";
-            pnlShaft.Size = new Size(150, 450);
-            pnlShaft.TabIndex = 0;
-            // 
-            // pnlCar
-            // 
-            pnlCar.BackColor = Color.SteelBlue;
-            pnlCar.Location = new Point(10, 260);
-            pnlCar.Name = "pnlCar";
-            pnlCar.Size = new Size(130, 180);
-            pnlCar.TabIndex = 0;
-            // 
+
+            // lblTitleA
+            lblTitleA.AutoSize = true;
+            lblTitleA.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            lblTitleA.ForeColor = Color.FromArgb(25, 55, 95);
+            lblTitleA.Location = new Point(20, 12);
+            lblTitleA.Name = "lblTitleA";
+            lblTitleA.Text = "Elevator A";
+
+            // pnlShaftA
+            pnlShaftA.BackColor = Color.Silver;
+            pnlShaftA.Controls.Add(pnlCarA);
+            pnlShaftA.Location = new Point(20, 35);
+            pnlShaftA.Name = "pnlShaftA";
+            pnlShaftA.Size = new Size(120, 450);
+
+            // pnlCarA
+            pnlCarA.BackColor = Color.SteelBlue;
+            pnlCarA.Location = new Point(10, 260);
+            pnlCarA.Name = "pnlCarA";
+            pnlCarA.Size = new Size(100, 180);
+
+            // lblTitleB
+            lblTitleB.AutoSize = true;
+            lblTitleB.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            lblTitleB.ForeColor = Color.FromArgb(25, 55, 95);
+            lblTitleB.Location = new Point(160, 12);
+            lblTitleB.Name = "lblTitleB";
+            lblTitleB.Text = "Elevator B";
+
+            // pnlShaftB
+            pnlShaftB.BackColor = Color.Silver;
+            pnlShaftB.Controls.Add(pnlCarB);
+            pnlShaftB.Location = new Point(160, 35);
+            pnlShaftB.Name = "pnlShaftB";
+            pnlShaftB.Size = new Size(120, 450);
+
+            // pnlCarB
+            pnlCarB.BackColor = Color.CornflowerBlue;
+            pnlCarB.Location = new Point(10, 260);
+            pnlCarB.Name = "pnlCarB";
+            pnlCarB.Size = new Size(100, 180);
+
             // lblFloor1Name
-            // 
             lblFloor1Name.AutoSize = true;
-            lblFloor1Name.Location = new Point(190, 30);
+            lblFloor1Name.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            lblFloor1Name.ForeColor = Color.FromArgb(25, 55, 95);
+            lblFloor1Name.Location = new Point(300, 55);
             lblFloor1Name.Name = "lblFloor1Name";
-            lblFloor1Name.Size = new Size(74, 20);
-            lblFloor1Name.TabIndex = 1;
-            lblFloor1Name.Text = "First Floor";
-            // 
-            // btnRequestFloor1
-            // 
-            btnRequestFloor1.Location = new Point(190, 60);
-            btnRequestFloor1.Name = "btnRequestFloor1";
-            btnRequestFloor1.Size = new Size(94, 29);
-            btnRequestFloor1.TabIndex = 2;
-            btnRequestFloor1.Text = "Call";
-            btnRequestFloor1.UseVisualStyleBackColor = true;
-            btnRequestFloor1.Click += btnRequestFloor1_Click;
-            // 
-            // lblStatusFloor1
-            // 
-            lblStatusFloor1.AutoSize = true;
-            lblStatusFloor1.Location = new Point(190, 100);
-            lblStatusFloor1.Name = "lblStatusFloor1";
-            lblStatusFloor1.Size = new Size(97, 20);
-            lblStatusFloor1.TabIndex = 3;
-            lblStatusFloor1.Text = "Elevator at: G";
-            // 
+            lblFloor1Name.Text = "First floor";
+
+            // btnCall1
+            StyleAccentButton(btnCall1);
+            btnCall1.Location = new Point(300, 82);
+            btnCall1.Name = "btnCall1";
+            btnCall1.Size = new Size(120, 40);
+            btnCall1.Text = "Call up to 1";
+            btnCall1.Click += btnCall1_Click;
+
             // lblFloor0Name
-            // 
             lblFloor0Name.AutoSize = true;
-            lblFloor0Name.Location = new Point(190, 280);
+            lblFloor0Name.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            lblFloor0Name.ForeColor = Color.FromArgb(25, 55, 95);
+            lblFloor0Name.Location = new Point(300, 430);
             lblFloor0Name.Name = "lblFloor0Name";
-            lblFloor0Name.Size = new Size(96, 20);
-            lblFloor0Name.TabIndex = 4;
-            lblFloor0Name.Text = "Ground Floor";
-            // 
-            // btnRequestFloor0
-            // 
-            btnRequestFloor0.Location = new Point(190, 310);
-            btnRequestFloor0.Name = "btnRequestFloor0";
-            btnRequestFloor0.Size = new Size(94, 29);
-            btnRequestFloor0.TabIndex = 5;
-            btnRequestFloor0.Text = "Call";
-            btnRequestFloor0.UseVisualStyleBackColor = true;
-            btnRequestFloor0.Click += btnRequestFloor0_Click;
-            // 
-            // lblStatusFloor0
-            // 
-            lblStatusFloor0.AutoSize = true;
-            lblStatusFloor0.Location = new Point(190, 350);
-            lblStatusFloor0.Name = "lblStatusFloor0";
-            lblStatusFloor0.Size = new Size(97, 20);
-            lblStatusFloor0.TabIndex = 6;
-            lblStatusFloor0.Text = "Elevator at: G";
-            // 
-            // grpControlPanel
-            // 
-            grpControlPanel.Controls.Add(btnFloor0);
-            grpControlPanel.Controls.Add(btnFloor1);
-            grpControlPanel.Controls.Add(lblDisplay);
-            grpControlPanel.Location = new Point(360, 20);
-            grpControlPanel.Name = "grpControlPanel";
-            grpControlPanel.Size = new Size(220, 250);
-            grpControlPanel.TabIndex = 7;
-            grpControlPanel.TabStop = false;
-            grpControlPanel.Text = "Control Panel";
-            // 
-            // btnFloor0
-            // 
-            btnFloor0.Location = new Point(120, 130);
-            btnFloor0.Name = "btnFloor0";
-            btnFloor0.Size = new Size(80, 60);
-            btnFloor0.TabIndex = 2;
-            btnFloor0.Text = "G";
-            btnFloor0.UseVisualStyleBackColor = true;
-            btnFloor0.Click += btnFloor0_Click;
-            // 
-            // btnFloor1
-            // 
-            btnFloor1.Location = new Point(20, 130);
-            btnFloor1.Name = "btnFloor1";
-            btnFloor1.Size = new Size(80, 60);
-            btnFloor1.TabIndex = 1;
-            btnFloor1.Text = "1";
-            btnFloor1.UseVisualStyleBackColor = true;
-            btnFloor1.Click += btnFloor1_Click;
-            // 
-            // lblDisplay
-            // 
-            lblDisplay.BackColor = Color.Black;
-            lblDisplay.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblDisplay.ForeColor = Color.Lime;
-            lblDisplay.Location = new Point(20, 30);
-            lblDisplay.Name = "lblDisplay";
-            lblDisplay.Size = new Size(180, 70);
-            lblDisplay.TabIndex = 0;
-            lblDisplay.Text = "G";
-            lblDisplay.TextAlign = ContentAlignment.TopCenter;
-            // 
+            lblFloor0Name.Text = "Ground floor";
+
+            // btnCall0
+            StyleAccentButton(btnCall0);
+            btnCall0.Location = new Point(300, 457);
+            btnCall0.Name = "btnCall0";
+            btnCall0.Size = new Size(120, 40);
+            btnCall0.Text = "Call down to G";
+            btnCall0.Click += btnCall0_Click;
+
+            // grpPanelA
+            grpPanelA.BackColor = Color.Transparent;
+            grpPanelA.Controls.Add(lblDisplayA);
+            grpPanelA.Controls.Add(btnA1);
+            grpPanelA.Controls.Add(btnA0);
+            grpPanelA.Controls.Add(lblStatusA);
+            grpPanelA.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            grpPanelA.ForeColor = Color.FromArgb(25, 55, 95);
+            grpPanelA.Location = new Point(440, 35);
+            grpPanelA.Name = "grpPanelA";
+            grpPanelA.Size = new Size(250, 210);
+            grpPanelA.TabStop = false;
+            grpPanelA.Text = "Elevator A - inside";
+
+            // lblDisplayA
+            lblDisplayA.BackColor = Color.Black;
+            lblDisplayA.Font = new Font("Segoe UI", 24F, FontStyle.Regular);
+            lblDisplayA.ForeColor = Color.Lime;
+            lblDisplayA.Location = new Point(20, 30);
+            lblDisplayA.Name = "lblDisplayA";
+            lblDisplayA.Size = new Size(210, 70);
+            lblDisplayA.Text = "G";
+            lblDisplayA.TextAlign = ContentAlignment.MiddleCenter;
+
+            // btnA1
+            StyleAccentButton(btnA1);
+            btnA1.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            btnA1.Location = new Point(20, 115);
+            btnA1.Name = "btnA1";
+            btnA1.Size = new Size(95, 60);
+            btnA1.Text = "1";
+            btnA1.Click += btnA1_Click;
+
+            // btnA0
+            StyleAccentButton(btnA0);
+            btnA0.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            btnA0.Location = new Point(125, 115);
+            btnA0.Name = "btnA0";
+            btnA0.Size = new Size(95, 60);
+            btnA0.Text = "G";
+            btnA0.Click += btnA0_Click;
+
+            // lblStatusA
+            lblStatusA.AutoSize = true;
+            lblStatusA.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            lblStatusA.ForeColor = Color.FromArgb(40, 40, 40);
+            lblStatusA.Location = new Point(20, 182);
+            lblStatusA.Name = "lblStatusA";
+            lblStatusA.Text = "Idle at G";
+
+            // grpPanelB
+            grpPanelB.BackColor = Color.Transparent;
+            grpPanelB.Controls.Add(lblDisplayB);
+            grpPanelB.Controls.Add(btnB1);
+            grpPanelB.Controls.Add(btnB0);
+            grpPanelB.Controls.Add(lblStatusB);
+            grpPanelB.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            grpPanelB.ForeColor = Color.FromArgb(25, 55, 95);
+            grpPanelB.Location = new Point(710, 35);
+            grpPanelB.Name = "grpPanelB";
+            grpPanelB.Size = new Size(250, 210);
+            grpPanelB.TabStop = false;
+            grpPanelB.Text = "Elevator B - inside";
+
+            // lblDisplayB
+            lblDisplayB.BackColor = Color.Black;
+            lblDisplayB.Font = new Font("Segoe UI", 24F, FontStyle.Regular);
+            lblDisplayB.ForeColor = Color.Lime;
+            lblDisplayB.Location = new Point(20, 30);
+            lblDisplayB.Name = "lblDisplayB";
+            lblDisplayB.Size = new Size(210, 70);
+            lblDisplayB.Text = "G";
+            lblDisplayB.TextAlign = ContentAlignment.MiddleCenter;
+
+            // btnB1
+            StyleAccentButton(btnB1);
+            btnB1.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            btnB1.Location = new Point(20, 115);
+            btnB1.Name = "btnB1";
+            btnB1.Size = new Size(95, 60);
+            btnB1.Text = "1";
+            btnB1.Click += btnB1_Click;
+
+            // btnB0
+            StyleAccentButton(btnB0);
+            btnB0.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            btnB0.Location = new Point(125, 115);
+            btnB0.Name = "btnB0";
+            btnB0.Size = new Size(95, 60);
+            btnB0.Text = "G";
+            btnB0.Click += btnB0_Click;
+
+            // lblStatusB
+            lblStatusB.AutoSize = true;
+            lblStatusB.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            lblStatusB.ForeColor = Color.FromArgb(40, 40, 40);
+            lblStatusB.Location = new Point(20, 182);
+            lblStatusB.Name = "lblStatusB";
+            lblStatusB.Text = "Idle at G";
+
             // btnLog
-            // 
-            btnLog.Location = new Point(360, 290);
+            btnLog.BackColor = Color.FromArgb(176, 196, 222);
+            btnLog.FlatStyle = FlatStyle.Flat;
+            btnLog.ForeColor = Color.FromArgb(25, 55, 95);
+            btnLog.Location = new Point(440, 260);
             btnLog.Name = "btnLog";
             btnLog.Size = new Size(120, 35);
-            btnLog.TabIndex = 8;
             btnLog.Text = "Show Log";
-            btnLog.UseVisualStyleBackColor = true;
+            btnLog.UseVisualStyleBackColor = false;
             btnLog.Click += btnLog_Click;
-            // 
+
+            // btnHistory
+            btnHistory.BackColor = Color.FromArgb(176, 196, 222);
+            btnHistory.FlatStyle = FlatStyle.Flat;
+            btnHistory.ForeColor = Color.FromArgb(25, 55, 95);
+            btnHistory.Location = new Point(570, 260);
+            btnHistory.Name = "btnHistory";
+            btnHistory.Size = new Size(130, 35);
+            btnHistory.Text = "History Logs";
+            btnHistory.UseVisualStyleBackColor = false;
+            btnHistory.Click += btnHistory_Click;
+
             // dgvLog
-            // 
+            dgvLog.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dgvLog.BackgroundColor = Color.White;
             dgvLog.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvLog.Location = new Point(360, 335);
+            dgvLog.Location = new Point(440, 305);
             dgvLog.Name = "dgvLog";
             dgvLog.ReadOnly = true;
             dgvLog.RowHeadersWidth = 51;
-            dgvLog.Size = new Size(500, 200);
-            dgvLog.TabIndex = 9;
-            // 
-            // btnHistory
-            // 
-            btnHistory.Location = new Point(740, 290);
-            btnHistory.Name = "btnHistory";
-            btnHistory.Size = new Size(120, 35);
-            btnHistory.TabIndex = 10;
-            btnHistory.Text = "History Logs";
-            btnHistory.UseVisualStyleBackColor = true;
-            btnHistory.Click += btnHistory_Click;
-            // 
+            dgvLog.Size = new Size(520, 350);
+            dgvLog.TabIndex = 0;
+
             // animationTimer
-            // 
             animationTimer.Interval = 15;
             animationTimer.Tick += animationTimer_Tick;
-            // 
+
             // Form1
-            // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(882, 553);
+            BackColor = Color.FromArgb(222, 238, 250);
+            ClientSize = new Size(980, 680);
+            MinimumSize = new Size(1000, 740);
+            Controls.Add(lblTitleA);
+            Controls.Add(pnlShaftA);
+            Controls.Add(lblTitleB);
+            Controls.Add(pnlShaftB);
+            Controls.Add(lblFloor1Name);
+            Controls.Add(btnCall1);
+            Controls.Add(lblFloor0Name);
+            Controls.Add(btnCall0);
+            Controls.Add(grpPanelA);
+            Controls.Add(grpPanelB);
+            Controls.Add(btnLog);
             Controls.Add(btnHistory);
             Controls.Add(dgvLog);
-            Controls.Add(btnLog);
-            Controls.Add(grpControlPanel);
-            Controls.Add(lblStatusFloor0);
-            Controls.Add(btnRequestFloor0);
-            Controls.Add(lblFloor0Name);
-            Controls.Add(lblStatusFloor1);
-            Controls.Add(btnRequestFloor1);
-            Controls.Add(lblFloor1Name);
-            Controls.Add(pnlShaft);
             Name = "Form1";
             Text = "Elevator Control";
-            pnlShaft.ResumeLayout(false);
-            grpControlPanel.ResumeLayout(false);
+
+            pnlShaftA.ResumeLayout(false);
+            pnlShaftB.ResumeLayout(false);
+            grpPanelA.ResumeLayout(false);
+            grpPanelA.PerformLayout();
+            grpPanelB.ResumeLayout(false);
+            grpPanelB.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgvLog).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
+        // gives a button the shared blue "accent" look
+        private void StyleAccentButton(Button b)
+        {
+            b.BackColor = Color.SteelBlue;
+            b.ForeColor = Color.White;
+            b.FlatStyle = FlatStyle.Flat;
+            b.UseVisualStyleBackColor = false;
+        }
+
         #endregion
 
-        private Panel pnlShaft;
-        private Panel pnlCar;
+        private Label lblTitleA;
+        private Panel pnlShaftA;
+        private Panel pnlCarA;
+        private Label lblTitleB;
+        private Panel pnlShaftB;
+        private Panel pnlCarB;
         private Label lblFloor1Name;
-        private Button btnRequestFloor1;
-        private Label lblStatusFloor1;
+        private Button btnCall1;
         private Label lblFloor0Name;
-        private Button btnRequestFloor0;
-        private Label lblStatusFloor0;
-        private GroupBox grpControlPanel;
-        private Label lblDisplay;
-        private Button btnFloor0;
-        private Button btnFloor1;
+        private Button btnCall0;
+        private GroupBox grpPanelA;
+        private Label lblDisplayA;
+        private Button btnA1;
+        private Button btnA0;
+        private Label lblStatusA;
+        private GroupBox grpPanelB;
+        private Label lblDisplayB;
+        private Button btnB1;
+        private Button btnB0;
+        private Label lblStatusB;
         private Button btnLog;
-        private DataGridView dgvLog;
         private Button btnHistory;
+        private DataGridView dgvLog;
         private System.Windows.Forms.Timer animationTimer;
     }
 }
