@@ -10,20 +10,16 @@ namespace ElevatorApp
         {
             InitializeComponent();
         }
-        // Which floor the elevator is on: 0 = Ground, 1 = First
-        private int currentFloor = 0;
-        private int targetTop;      // where the car should end up
-        private int stepSize = 10;  // pixels the car moves each tick
+        // the elevator's logic now lives in this object
+        private Elevator elevator = new Elevator("A");
 
         // Moves the elevator to a floor and updates every display
         private void MoveTo(int floor)
         {
-            currentFloor = floor;
-
             string floorName = (floor == 0) ? "G" : "1";
 
-            // set the destination and start the animation (the timer moves the car)
-            targetTop = (floor == 1) ? 10 : 260;
+            // tell the elevator where to go, then start the animation
+            elevator.RequestFloor(floor);
             animationTimer.Start();
 
             // Update all the displays
@@ -139,22 +135,10 @@ namespace ElevatorApp
 
         private void animationTimer_Tick(object sender, EventArgs e)
         {
-            // called ~every 15ms: nudge the car toward the target floor
-            if (pnlCar.Top < targetTop)
-            {
-                // need to go down; don't overshoot past the target
-                pnlCar.Top = Math.Min(pnlCar.Top + stepSize, targetTop);
-            }
-            else if (pnlCar.Top > targetTop)
-            {
-                // need to go up; don't overshoot past the target
-                pnlCar.Top = Math.Max(pnlCar.Top - stepSize, targetTop);
-            }
-            else
-            {
-                // arrived at the floor, stop animating
-                animationTimer.Stop();
-            }
+            // called every tick: move the car a little toward its target
+            elevator.Step();                                   // advance the elevator
+            pnlCar.Top = (int)(260 - elevator.Position * 250); // 0.0 = bottom, 1.0 = top
+            if (!elevator.IsMoving) animationTimer.Stop();     // arrived, stop animating
         }
     }
 }
