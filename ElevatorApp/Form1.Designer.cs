@@ -175,8 +175,8 @@
 
             // lblStatusA
             lblStatusA.AutoSize = true;
-            lblStatusA.Font = new Font("Segoe UI", 10F, FontStyle.Regular);
-            lblStatusA.ForeColor = Color.FromArgb(40, 40, 40);
+            lblStatusA.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
+            lblStatusA.ForeColor = Color.FromArgb(20, 140, 60);
             lblStatusA.Location = new Point(25, 250);
             lblStatusA.Name = "lblStatusA";
             lblStatusA.Text = "Idle at G";
@@ -225,8 +225,8 @@
 
             // lblStatusB
             lblStatusB.AutoSize = true;
-            lblStatusB.Font = new Font("Segoe UI", 10F, FontStyle.Regular);
-            lblStatusB.ForeColor = Color.FromArgb(40, 40, 40);
+            lblStatusB.Font = new Font("Segoe UI", 13F, FontStyle.Bold);
+            lblStatusB.ForeColor = Color.FromArgb(20, 140, 60);
             lblStatusB.Location = new Point(25, 250);
             lblStatusB.Name = "lblStatusB";
             lblStatusB.Text = "Idle at G";

@@ -39,7 +39,18 @@ namespace ElevatorApp
             string floorName = (shownFloor == 1) ? "1" : "G";
 
             display.Text = floorName;
-            status.Text = e.IsMoving ? ("Moving to " + floorName) : ("Idle at " + floorName);
+
+            // colour-code the status: green = free (Idle), orange = busy (Moving)
+            if (e.IsMoving)
+            {
+                status.Text = "Moving to " + floorName;
+                status.ForeColor = Color.FromArgb(200, 110, 0);   // orange
+            }
+            else
+            {
+                status.Text = "Idle at " + floorName;
+                status.ForeColor = Color.FromArgb(20, 140, 60);   // green
+            }
         }
     }
 }
